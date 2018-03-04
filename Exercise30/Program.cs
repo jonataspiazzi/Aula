@@ -6,8 +6,12 @@ namespace Exercise30
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             int qtdCarac, qtdLinha, qtdGlob;
-            string caractere;
+            //string caractere = ((char)0x2588).ToString();
+            string caractere = ((char)0x2592).ToString();
+            ConsoleColor cor;
 
             Console.WriteLine("Digite a largura: ");
             qtdCarac = int.Parse(Console.ReadLine());
@@ -25,11 +29,13 @@ namespace Exercise30
             {
                 if (contGlob % 2 == 0)
                 {
-                    caractere = "*";
+                    //caractere = "*";
+                    cor = ConsoleColor.Blue;
                 }
                 else
                 {
-                    caractere = "+";
+                    //caractere = "+";
+                    cor = ConsoleColor.Red;
                 }
 
                 contLinha = 0;
@@ -38,6 +44,8 @@ namespace Exercise30
                     contCarac = 0;
                     while (contCarac < qtdCarac)
                     {
+                        Console.ForegroundColor = cor;
+                        Console.BackgroundColor = ConsoleColor.White;
                         Console.Write(caractere);
                         contCarac++;
                     }
@@ -46,6 +54,9 @@ namespace Exercise30
                 }
                 contGlob++;
             }
+
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.BackgroundColor = ConsoleColor.Black;
         }
     }
 }
