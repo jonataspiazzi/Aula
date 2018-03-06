@@ -15,7 +15,7 @@ namespace Exercise72
             int i, num, qtd;
             long fatorial;
 
-            qtd = 3;
+            qtd = 15;
 
             a = new int[qtd];
             b = new long[qtd];
