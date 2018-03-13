@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/CSharp/Exercises/0026/v1/v1.csproj"
+                "${workspaceFolder}/CSharp/Exercicios/0080/v2/v2.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
