@@ -14,7 +14,7 @@ namespace v1
             qtd = 5;
             v = new int[qtd];
 
-            for (i = qtd - 1; i >= 0; i--) // for invertido passa do ultimo ao primeiro.
+            for (i = 0; i < qtd; i++)
             {
                 Console.Write("Digite o " + (i + 1) + "º dígito da esquerda para direita é: ");
                 v[i] = int.Parse(Console.ReadLine());
@@ -25,7 +25,7 @@ namespace v1
             for (i = 0; i < qtd; i++)
             {
                 // v[0]*2**4 + v[1]*2**3 + v[2]*2**2
-                num = num + v[i] * (int)Math.Pow(2, i);
+                num = num + v[i] * (int)Math.Pow(2, 4 - i);
             }
 
             Console.WriteLine("O valor em decimal é: " + num);
