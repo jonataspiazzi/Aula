@@ -6,6 +6,8 @@ namespace aula3
     {
         static void Main(string[] args)
         {
+            // Atualizacao
+            
             int cont, idade, soma;
             string nome, texto;
 
