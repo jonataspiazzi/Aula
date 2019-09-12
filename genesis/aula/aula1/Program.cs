@@ -19,6 +19,8 @@ namespace aula1
             rescisão = 0;
             texto = "";
 
+            // lalala
+
             Console.WriteLine("Qual o valor do salario?");
             texto = Console.ReadLine();
             salario = decimal.Parse(texto);
