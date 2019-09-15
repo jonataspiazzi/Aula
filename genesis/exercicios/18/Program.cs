@@ -23,7 +23,6 @@ namespace _18
             {
                 Console.WriteLine(A + "é menor do que " + B);
             }
-
         }
     }
 }
