@@ -20,28 +20,29 @@ namespace _19
             max = int.Parse(texto);
 
             while ( cont < max)
-
             {
+                Console.WriteLine("Digite a idade:");
+                idade = console.ReadLine();
+                Console.WriteLine("Digite o nome:");
+                texto  = console.ReadLine();
+                nome = int.Parse(texto);
 
-            Console.WriteLine("Digite a idade:");
-            idade = console.ReadLine();
-            Console.WriteLine("Digite o nome:");
-            texto  = console.ReadLine();
-            nome = int.Parse(texto);
+                if (idade > 20)
+                {
+                  soma = soma + 1;
+                  nomes = nomes + nome;
+                }
+                else 
+                {
+                  Console.WriteLine("Nenhum habitante tem a idade menor que 20 anos");
+                }
 
-            if ( idade > 20 )
-            {
-               soma = soma + 1;
-               nomes = nomes + nome;
+                cont = cont + 1;
             }
-            else 
-            {
-               Console.WriteLine("Nenhum habitante tem a idade menor que 20 anos");
-            }
-            cont = cont + 1;
-            }
+
             Console.WriteLine(nomes + "São maiores de 20 anos");
-            {
-        }
-    }
-}
+            { // <==== este é o problema. a chave está abrindo
+        } // <== por consequencia essa chave fecha a de cima.
+    } // <== no fim das contas cada chave, esta fechando a outra
+} // <== quando chega nesta ultima chave, ela está fechando a penultima
+// ai o programa fica esperando mais uma chave, q fecharia a primeira chave (do namespace)
