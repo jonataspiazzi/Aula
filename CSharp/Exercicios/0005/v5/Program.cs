@@ -14,7 +14,7 @@ namespace v5
             // Deve ser usado vetor.
             // Deve ser usado funções.
 
-            int qtd, soma, abs;
+            int qtd, soma;
             int[] nums;
 
             Console.Write("Digite a quantidade de números a serem lidos: ");
