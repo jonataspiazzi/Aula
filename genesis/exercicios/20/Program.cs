@@ -6,41 +6,45 @@ namespace _20
     {
         static void Main(string[] args)
         {
-             // Erro na linha 49,2 - não sei o pq deste erro.
-
-            int cont, idade, soma, max, menos;
-            string nome,nomes, texto;
+            int cont, idade, soma, max;
+            string nome,nomesmaior, nomesmenor, idades, texto;
 
             cont = 0;
             soma = 0;
             max = 0;
+            nomesmaior = " ";
+            nomesmenor = " ";
+            idades = " ";
 
             Console.WriteLine("Quantos nomes seram analisados?");
             texto = Console.ReadLine();
             max = int.Parse(texto);
-
+           
             while ( cont < max)
+            {
+                Console.WriteLine("Digite o nome: ");
+                nome = Console.ReadLine();
 
-            {
+                Console.WriteLine("Digite a idade: ");
+                texto = Console.ReadLine();
+                idade = int.Parse(texto);
 
-            Console.WriteLine("Digite a idade:");
-            idade = console.ReadLine();
-            Console.WriteLine("Digite o nome:");
-            texto  = console.ReadLine();
-            nome = int.Parse(texto);
+                if (idade > 20)
+                {
+                  soma = soma + 1;
+                  nomesmaior = nomesmaior + nome + "  ";
+                }
+                else 
+                {
+                  idades = idades + idade + " ";
+                  nomesmenor = nomesmenor + nome + " tem " + idade + " anos ";
+                }
 
-            if ( idade > 20 )
-            {
-               soma = soma + 1;
-               nomes = nomes + nome;
+                cont = cont + 1;
             }
-            else 
-            {
-               menos = 
-            }
-            cont = cont + 1;
-            }
-            Console.WriteLine(nomes + "São maiores de 20 anos");
-            {
+
+            Console.WriteLine(nomesmaior + ": tem idade superior a 20 anos");
+            Console.WriteLine(nomesmenor);
+            } 
     }
 }
