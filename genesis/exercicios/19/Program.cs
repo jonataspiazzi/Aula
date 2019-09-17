@@ -32,7 +32,7 @@ namespace _19
                 if (idade > 20)
                 {
                   soma = soma + 1;
-                  nomes = nomes + nome + "  ";
+                  nomes = nomes + nome + ",";
                 }
                 else 
                 {
@@ -42,7 +42,7 @@ namespace _19
                 cont = cont + 1;
             }
 
-            Console.WriteLine(nomes + ": são maiores de 20 anos");
+            Console.WriteLine(nomes + ": tem idade superior a 20 anos");
             } 
         }
     } 

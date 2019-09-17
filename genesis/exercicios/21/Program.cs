@@ -1,20 +1,19 @@
 ﻿using System;
 
-namespace _20
+namespace _21
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int cont, idade, soma, max;
-            string nome,nomesmaior, nomesmenor, idades, texto;
+           int cont, idade, soma, maior, max;
+            string nome,nomes, texto;
 
             cont = 0;
             soma = 0;
             max = 0;
-            nomesmaior = " ";
-            nomesmenor = " ";
-            idades = " ";
+            nomes = " ";
+            maior = 0;
 
             Console.WriteLine("Quantos nomes seram analisados?");
             texto = Console.ReadLine();
@@ -32,19 +31,26 @@ namespace _20
                 if (idade > 20)
                 {
                   soma = soma + 1;
-                  nomesmaior = nomesmaior + nome + ",";
+                  nomes = nomes + nome + ",";
                 }
                 else 
                 {
-                  idades = idades + idade + " ";
-                  nomesmenor = nomesmenor + nome + " tem " + idade + " anos ";
+                  
+                }
+                 if (idade >40)
+                {
+                  maior = maior + 1;
+                }
+                else 
+                {
+                  
                 }
 
                 cont = cont + 1;
             }
 
-            Console.WriteLine(nomesmaior + ": tem idade superior a 20 anos");
-            Console.WriteLine(nomesmenor);
-            } 
+            Console.WriteLine(nomes + ": tem idade superior a 20 anos");
+            Console.WriteLine(maior + ": pessoa tem idade superior a 40 anos");
+        }
     }
 }
