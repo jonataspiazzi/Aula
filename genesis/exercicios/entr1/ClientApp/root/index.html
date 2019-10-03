@@ -4,44 +4,124 @@
     <title>Minha Página</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <script src="js/cadastro.js"></script>
   </head>
   <body>
-    <div class="col-md-6">
-    <!-- general form elements -->
-    <div class="box box-primary">
-        <div class="box-header with-border">
-          <h3 class="box-title">Quick Example</h3>
+    <header>
+      <div class="icon">
+        <img src="images/logo.png" />
+      </div>
+      <ul class="menu-item">
+        <li>
+          <i class="icon meusjobs"></i>
+          <span>Meus jobs</span>
+        </li>
+        <li>
+          <i class="icon projetos"></i>
+          <span>Projetos</span>
+        </li>
+        <li>
+          <i class="icon contratos"></i>
+          <span>Contratos</span>
+        </li>
+        <li>
+          <i class="icon financeiro"></i>
+          <span>Financeiro</span>
+        </li>
+      </div>
+    </header>
+    <section class="cadastro">
+      <div class="controles">
+        <div>
+          <h2>Funcionários</h2>
+          <button id="novoFuncionario">Novo Funcionário</button>
         </div>
-        <!-- /.box-header -->
-        <!-- form start -->
-        <form role="form">
-          <div class="box-body">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputFile">File input</label>
-              <input type="file" id="exampleInputFile">
-
-              <p class="help-block">Example block-level help text here.</p>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Check me out
-              </label>
-            </div>
+        <div>
+          <input type="text" placeholder="Buscar" />
+          <span class="contador">52 registros</span>
+        </div>
+      </div>
+      <div class="tabela">
+        <table id="funcionarios">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Nome</th>
+              <th>Departamento</th>
+              <th>E-mail</th>
+              <th>Telefone Primário</th>
+              <th>Acesso</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div class="modal-bg"></div>
+    <div class="modal">
+      <div class="modal-header">
+        <h1>Novo Funcionario</h1>
+      </div>
+      <div class="modal-body">
+        <div class="field-section">
+          <h2>Dados Pessoais</h2>
+          <div class="field-group">
+            <label>Nome *</label>
+            <input type="text" />
           </div>
-          <!-- /.box-body -->
-
-          <div class="box-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="field-group">
+            <label>E-mail *</label>
+            <input type="text" />
           </div>
-        </form>
+          <div class="field-group">
+            <label>Departamento *</label>
+            <input type="text" />
+          </div>
+          <div class="field-group">
+            <label>Data de Nascimento</label>
+            <input type="date" />
+          </div>
+          <div class="field-group">
+            <label>Telefone Primario</label>
+            <input type="text" />
+          </div>
+          <div class="field-group">
+            <label>Telefone Secundario</label>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="field-section">
+          <h2>Sistema</h2>
+          <div class="field-group">
+            <label>Login</label>
+            <input type="text" />
+          </div>
+          <div class="field-group">
+            <label>Acesso ao iClips</label>
+            <input type="text" />
+          </div>
+          <div class="field-group">
+            <label>Ativo na agência</label>
+            <input type="text" />
+          </div>
+          <div class="field-group">
+            <label>Senha</label>
+            <input type="text" />
+            <span>A senha deve ter entre 6 e 50 caracteres</span>
+          </div>
+          <div class="field-group">
+            <label>Confirmar Senha</label>
+            <input type="text" />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button>Cancelar</button>
+        <button>Salvar</button>
       </div>
     </div>
   </body>
