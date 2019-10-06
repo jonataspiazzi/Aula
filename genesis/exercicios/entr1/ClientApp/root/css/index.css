@@ -68,3 +68,122 @@ section.cadastro table td {
   border: 1px solid black;
   padding: 10px;
 }
+
+.row {
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+[class^="col"], [class*="col"] {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+[class^="col"]:first-child, [class*="col"]:first-child {
+  padding-left: 0;
+}
+
+[class^="col"]:last-child, [class*="col"]:last-child {
+  padding-right: 0;
+}
+
+.col-1  { width: 8.33%; }
+.col-2  { width: 16.66%; }
+.col-3  { width: 25%; }
+.col-4  { width: 33.32%; }
+.col-5  { width: 41.66%; }
+.col-6  { width: 50%; }
+.col-7  { width: 0%; }
+.col-8  { width: 0%; }
+.col-9  { width: 75%; }
+.col-10 { width: 0%; }
+.col-11 { width: 0%; }
+.col-12 { width: 100%; }
+
+.btn {
+  font-weight: bold;
+  border-width: 0;
+  border-radius: 30px;
+  padding: 6px 14px;
+  outline: none;
+}
+
+.btn+.btn {
+  margin-left: 10px;
+}
+
+.btn-purple {
+  background: #6a0d90;
+  color: #ffffff;
+}
+
+.btn-purple:hover {
+  background: #872aad;
+}
+
+.btn-pink {
+  background: #fc2aad;
+  color: #ffffff;
+}
+
+.btn-pink:hover {
+  background: #ff5fc3;
+}
+
+.btn-gray {
+  background: #d8e1eb;
+  color: #6a747e;
+}
+
+.btn-gray:hover {
+  background: #c8d2dc;
+}
+
+.input-toggle {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  position: relative;
+  margin: 0;
+}
+
+.input-toggle::before {
+  content: 'NÃO';
+  background: #97a6b4;
+  color: #ffffff;
+  font-weight: bold;
+  display: block;
+  width: 65px;
+  padding: 7px 13px;
+  padding-left: 30px;
+  font-size: 11px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 26px;
+}
+
+.input-toggle:checked::before {
+  content: 'SIM';
+  background: #04d96e;
+  padding-left: 13px;
+}
+
+.input-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  background: #ffffff;
+  border-radius: 11px;
+}
+
+.input-toggle:checked::after {
+  left: unset;
+  right: 2px;
+}

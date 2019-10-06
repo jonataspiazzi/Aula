@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var botao = document.getElementById("novoFuncionario");
+  document.getElementById("novoFuncionario").onclick = abrirModal;
+  document.querySelector('.modal .modal-header .close').onclick = fecharModal;
 
   listarFuncionariosDoServidor();
-
-  botao.onclick = novoFuncionario;
 });
 
 function novoFuncionario() {
@@ -82,4 +81,14 @@ function adicionaFuncionarioNaTabela(funcionario) {
 
     var c7 = document.createElement("td");
     linha.appendChild(c7);
+}
+
+function fecharModal() {
+  document.querySelector('.modal-bg').style.display = 'none';
+  document.querySelector('.modal-wrapper').style.display = 'none';
+}
+
+function abrirModal() {
+  document.querySelector('.modal-bg').style.display = 'block';
+  document.querySelector('.modal-wrapper').style.display = 'flex';
 }

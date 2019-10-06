@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/form.css" />
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <script src="js/cadastro.js"></script>
+    <script src="./js/cadastro.js"></script>
   </head>
   <body>
     <header>
@@ -61,67 +62,86 @@
         </table>
       </div>
     </section>
-    <div class="modal-bg"></div>
-    <div class="modal">
-      <div class="modal-header">
-        <h1>Novo Funcionario</h1>
-      </div>
-      <div class="modal-body">
-        <div class="field-section">
-          <h2>Dados Pessoais</h2>
-          <div class="field-group">
-            <label>Nome *</label>
-            <input type="text" />
+    <div class="modal-bg" style="display: none;"></div>
+    <div class="modal-wrapper" style="display: none;">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Novo Funcionario</h2>
+          <div class="close"></div>
+        </div>
+        <div class="modal-body">
+          <div class="field-section">
+            <div class="row">
+              <h3>Dados Pessoais</h3>
+            </div>
+            <div class="row">
+              <div class="field-group col-6">
+                <label>Nome *</label>
+                <input type="text" />
+              </div>
+              <div class="field-group col-6">
+                <label>E-mail *</label>
+                <input type="text" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="field-group col-6">
+                <label>Departamento *</label>
+                <input type="text" />
+              </div>
+              <div class="field-group col-6">
+                <label>Data de Nascimento</label>
+                <input type="date" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="field-group col-6">
+                <label>Telefone Primario</label>
+                <input type="text" />
+              </div>
+              <div class="field-group col-6">
+                <label>Telefone Secundario</label>
+                <input type="text" />
+              </div>
+            </div>
           </div>
-          <div class="field-group">
-            <label>E-mail *</label>
-            <input type="text" />
-          </div>
-          <div class="field-group">
-            <label>Departamento *</label>
-            <input type="text" />
-          </div>
-          <div class="field-group">
-            <label>Data de Nascimento</label>
-            <input type="date" />
-          </div>
-          <div class="field-group">
-            <label>Telefone Primario</label>
-            <input type="text" />
-          </div>
-          <div class="field-group">
-            <label>Telefone Secundario</label>
-            <input type="text" />
+          <div class="field-section">
+            <div class="row"></div>
+            <div class="row">
+              <h3>Sistema</h3>
+            </div>
+            <div class="row">
+              <div class="field-group col-6">
+                <label>Login</label>
+                <input type="text" />
+              </div>
+              <div class="field-group col-3">
+                <label>Acesso ao iClips</label>
+                <input type="checkbox" class="input-toggle" />
+              </div>
+              <div class="field-group col-3">
+                <label>Ativo na agência</label>
+                <input type="checkbox" class="input-toggle" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="field-group col-6">
+                <label>Senha</label>
+                <input type="text" />
+                <span>A senha deve ter entre 6 e 50 caracteres</span>
+              </div>
+              <div class="field-group col-6">
+                <label>Confirmar Senha</label>
+                <input type="text" />
+              </div>
+            </div>
+            <div class="row"></div>
           </div>
         </div>
-        <div class="field-section">
-          <h2>Sistema</h2>
-          <div class="field-group">
-            <label>Login</label>
-            <input type="text" />
-          </div>
-          <div class="field-group">
-            <label>Acesso ao iClips</label>
-            <input type="text" />
-          </div>
-          <div class="field-group">
-            <label>Ativo na agência</label>
-            <input type="text" />
-          </div>
-          <div class="field-group">
-            <label>Senha</label>
-            <input type="text" />
-            <span>A senha deve ter entre 6 e 50 caracteres</span>
-          </div>
-          <div class="field-group">
-            <label>Confirmar Senha</label>
-            <input type="text" />
-          </div>
+        <div class="modal-footer">
+          <button class="btn btn-gray">Cancelar</button>
+          <button class="btn btn-purple">Salvar</button>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button>Cancelar</button>
-        <button>Salvar</button>
       </div>
     </div>
   </body>

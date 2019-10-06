@@ -1,20 +1,69 @@
 .modal-bg {
+  background: #000000;
+  position: fixed;
   width: 100vw;
   height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: .5;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
-
+  width: 680px;
+  background: #ffffff;
+  border-radius: 10px;
 }
 
 .modal .modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.modal .modal-header h2 {
+  margin: 0;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal .modal-header .close {
+  background: url(../images/fechar.png);
+  display: block;
+  width: 15px;
+  height: 15px;
 }
 
 .modal .modal-body {
-  
+  padding: 20px;
+  padding-top: 0;
+}
+
+.modal .modal-body h3 {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .modal .modal-footer {
-  
+  padding: 20px;
+  border-top: 1px solid #ececec;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }

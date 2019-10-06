@@ -1,0 +1,48 @@
+.field-section {
+  clear: both;
+}
+
+.field-group {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.field-group label {
+  display: block;
+  color: #6f6f6f;
+  font-size: 14px;
+}
+
+.field-group input[type=text],
+.field-group input[type=password],
+.field-group input[type=date],
+.field-group input[type=email] {
+  display: block;
+  width: 100%;
+  padding: 6px 6px;
+  height: 32px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d6d6d6;
+  outline: none;
+}
+
+.field-group input[type=text]:focus,
+.field-group input[type=password]:focus,
+.field-group input[type=date]:focus,
+.field-group input[type=email]:focus {
+  border: 1px solid #9e3ec5;
+  box-shadow: 0px 0px 5px 0px #b467d4;
+}
+
+.field-group input[type=checkbox] {
+  height: 32px;
+}
+
+.field-group span {
+  display: block;
+  color: #6f6f6f;
+  font-size: 12px;
+}
