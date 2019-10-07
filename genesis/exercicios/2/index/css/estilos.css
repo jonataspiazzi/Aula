@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+body{
+    background-image: url("imagens/parede.jpg");
+    background-color:#cfd4d0;
+    color: rgba(0,0,0,0.5);
+}
+p{
+    text-align: justify;
+    text-indent:30px;
+    text-align: center;
+    color: black;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+img{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+head{
+    align-items: center;
+}
