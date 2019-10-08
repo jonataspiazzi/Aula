@@ -4,6 +4,11 @@ html, body {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   background: #6a0d90;
   display: flex;
@@ -56,17 +61,48 @@ header ul.menu-item li:hover {
 }
 
 section.cadastro {
-  
+  padding: 30px;
 }
 
 section.cadastro table {
   border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #f0f6fa;
 }
 
 section.cadastro table th,
 section.cadastro table td {
-  border: 1px solid black;
+  border: 0;
   padding: 10px;
+}
+
+section.cadastro table th {
+  background: #f0f6fa;
+  color: #848d94;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+section.cadastro table td {
+  border-bottom: 1px solid #f0f6fa;
+  font-size: 12px;
+}
+
+section.cadastro table tr td:first-child {
+  text-align: center;
+}
+
+section.cadastro table tr:hover td {
+  background: #f0f6fa;
+  color: #848d94;
+}
+
+section.cadastro table tr td .grid-button {
+  opacity: 0;
+}
+
+section.cadastro table tr:hover td .grid-button {
+  opacity: 1;
 }
 
 .row {
@@ -103,6 +139,13 @@ section.cadastro table td {
 .col-11 { width: 91.66%; }
 .col-12 { width: 100%; }
 
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .btn {
   font-weight: bold;
   border-width: 0;
@@ -127,12 +170,6 @@ section.cadastro table td {
 .btn-pink {
   background: #fc2aad;
   color: #ffffff;
-  font-weight: bold;
-  border-width: 0;
-  border-radius: 30px;
-  padding: 6px 14px;
-  outline: none;
-  float: right;
 }
 
 .btn-pink:hover {
@@ -193,12 +230,3 @@ section.cadastro table td {
   left: unset;
   right: 2px;
 }
-.tabela{
-  background: rgb(209, 205, 205);
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  margin:0px;
-}
-  
-  

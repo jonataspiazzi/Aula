@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/modal.css" />
     <link rel="stylesheet" href="./css/form.css" />
-    <link rel="stylerheet" href="./css/first.css" />
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <script src="./js/cadastro.js"></script>
   </head>
@@ -35,33 +34,29 @@
       </div>
     </header>
     <section class="cadastro">
-      <div class="controles">
-        novoFuncionario
-          <h2>Funcionários</h2>
-          <button class="btn-pink" id="novoFuncionario">Novo Funcionário</button>
-        </div>
-        <div>
-          <input type="text" placeholder="Buscar" />
-          <span class="contador">52 registros</span>
-        </div>
+      <div class="flex-space-between">
+        <h3>Funcionários</h3>
+        <button class="btn btn-pink" id="novoFuncionario">Novo Funcionário</button>
       </div>
-      <div class="tabela">
-        <table id="funcionarios">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Nome</th>
-              <th>Departamento</th>
-              <th>E-mail</th>
-              <th>Telefone Primário</th>
-              <th>Acesso</th>
-              <th>Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
+      <div class="flex-space-between">
+        <input type="text" placeholder="Buscar" class="buscar" />
+        <span class="contador">52 registros</span>
       </div>
+      <table id="funcionarios">
+        <thead>
+          <tr>
+            <th><input type="checkbox" /></th>
+            <th>Nome</th>
+            <th>Departamento</th>
+            <th>E-mail</th>
+            <th>Telefone Primário</th>
+            <th>Acesso</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
     </section>
     <div class="modal-bg" style="display: none;"></div>
     <div class="modal-wrapper" style="display: none;">

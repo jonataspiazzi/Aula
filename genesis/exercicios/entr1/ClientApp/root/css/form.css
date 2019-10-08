@@ -46,3 +46,17 @@
   color: #6f6f6f;
   font-size: 12px;
 }
+
+.buscar {
+  background: #f0f6fa;
+  color: #848d94;
+  border: 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.contador {
+  color: #848d94;
+  font-size: 14px;
+}
