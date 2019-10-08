@@ -96,11 +96,11 @@ section.cadastro table td {
 .col-4  { width: 33.32%; }
 .col-5  { width: 41.66%; }
 .col-6  { width: 50%; }
-.col-7  { width: 0%; }
-.col-8  { width: 0%; }
+.col-7  { width: 58.33%; }
+.col-8  { width: 66.66%; }
 .col-9  { width: 75%; }
-.col-10 { width: 0%; }
-.col-11 { width: 0%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
 .col-12 { width: 100%; }
 
 .btn {
@@ -127,6 +127,12 @@ section.cadastro table td {
 .btn-pink {
   background: #fc2aad;
   color: #ffffff;
+  font-weight: bold;
+  border-width: 0;
+  border-radius: 30px;
+  padding: 6px 14px;
+  outline: none;
+  float: right;
 }
 
 .btn-pink:hover {
@@ -187,3 +193,12 @@ section.cadastro table td {
   left: unset;
   right: 2px;
 }
+.tabela{
+  background: rgb(209, 205, 205);
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin:0px;
+}
+  
+  
