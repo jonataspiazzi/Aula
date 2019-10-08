@@ -22,7 +22,7 @@ namespace _29
 
             termo = a + "/" + b;
 
-            termos = termos + "__" termo;
+            termos = termos + " " termo;
 
             cont = cont + 1;
 
