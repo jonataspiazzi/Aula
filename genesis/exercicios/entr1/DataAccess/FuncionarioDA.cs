@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using entr1.Models;
+using System.Linq;
 
 namespace entr1.DataAccess
 {
@@ -8,50 +9,45 @@ namespace entr1.DataAccess
     {
         public static List<Funcionario> _funcionarios;
 
-        static FuncionarioDA()
-        {
-            _funcionarios = new List<Funcionario>
-            {
-                new Funcionario
-                {
-                    IdFuncionario = 1,
-                    Nome = "Augusto Cezar",
-                    Departamento = "Desenvolvimento",
-                    Email = "a@iclips.com.br",
-                    TelefonePrimario = "(32) 99876-5432",
-                    AcessoAoIClips = true
-                },
-                new Funcionario
-                {
-                    IdFuncionario = 2,
-                    Nome = "Karina Vasconcellos",
-                    Departamento = "Customer Success",
-                    Email = "a@iclips.com.br",
-                    TelefonePrimario = "(32) 99876-5432",
-                    AcessoAoIClips = false
-                }
-            };
-        }
-
         public List<Funcionario> GetFuncionarios()
         {
-            return _funcionarios;
+            using (var context = new IClipsDbContext())
+            {
+                return context.Funcionarios.ToList();
+            }
         }
 
         public Funcionario Criar(Funcionario model)
         {
-            model.IdFuncionario = _funcionarios.Count + 1;
+            using (var context = new IClipsDbContext())
+            {
+                context.Funcionarios.Add(model);
+                context.SaveChanges();
 
-            return model;
+                return model;
+            }
         }
 
         public Funcionario Editar(Funcionario model)
         {
-            return model;
+            using (var context = new IClipsDbContext())
+            {
+                context.Funcionarios.Attach(model);
+                context.SaveChanges();
+
+                return model;
+            }
         }
 
         public void Excluir(int id)
         {
+            using (var context = new IClipsDbContext())
+            {
+                var model = context.Funcionarios.First(f => f.IdFuncionario == id);
+                context.Remove(model);
+
+                context.SaveChanges();
+            }
         }
     }
 }
