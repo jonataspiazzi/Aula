@@ -30,8 +30,8 @@ namespace entr1.DataAccess
                 entity.Property(e => e.TelefoneSecundario).HasMaxLength(20);
                 entity.Property(e => e.Login).HasMaxLength(20);
                 entity.Property(e => e.Senha).HasMaxLength(20);
-                entity.Property(e => e.AcessoAoIClips);
-                entity.Property(e => e.AtivoNaAgencia);
+                entity.Property(e => e.AcessoAoIClips).HasColumnType("bit");
+                entity.Property(e => e.AtivoNaAgencia).HasColumnType("bit");
             });
         }
     }

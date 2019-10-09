@@ -12,7 +12,7 @@ namespace entr1.Models
 
         public string Departamento { get; set; }
 
-        public DateTime DataNascimento { get; set; }
+        public DateTime? DataNascimento { get; set; }
 
         public string TelefonePrimario { get; set; }
 
