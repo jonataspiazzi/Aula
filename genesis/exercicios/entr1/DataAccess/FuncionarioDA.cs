@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using entr1.Models;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace entr1.DataAccess
 {
@@ -33,6 +34,7 @@ namespace entr1.DataAccess
             using (var context = new IClipsDbContext())
             {
                 context.Funcionarios.Attach(model);
+                context.Entry(model).State = EntityState.Modified;
                 context.SaveChanges();
 
                 return model;
