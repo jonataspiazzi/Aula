@@ -16,7 +16,35 @@ namespace entr1.Controllers
         [HttpGet]
         public ActionResult<List<Funcionario>> Get()
         {
-            return new FuncionarioDA().GetFuncionarios();
+            var da = new FuncionarioDA();
+
+            return da.GetFuncionarios();
+        }
+
+        [HttpPost]
+        public ActionResult<Funcionario> Post(Funcionario funcionario)
+        {
+            var da = new FuncionarioDA();
+
+            return da.Criar(funcionario);
+        }
+
+        [HttpPut("{id}")]
+        public ActionResult<Funcionario> Put(int id, Funcionario funcionario)
+        {
+            var da = new FuncionarioDA();
+
+            funcionario.IdFuncionario = id;
+
+            return da.Editar(funcionario);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            var da = new FuncionarioDA();
+
+            da.Excluir(id);
         }
     }
 }

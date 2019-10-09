@@ -98,13 +98,17 @@ function editar(id) {
 }
 
 function excluir(id) {
-  const funcionario = funcionarios.find(f => f.idFuncionario == id);
+  if (confirm('Deseja mesmo exclir este funcionário')) {
+    const funcionario = funcionarios.find(f => f.idFuncionario == id);
 
-  const index = funcionarios.indexOf(funcionario);
-  funcionarios.splice(index, 1);
-
-  const linha = document.querySelector(`table tr[id='${funcionario.idFuncionario}']`);
-  linha.parentNode.removeChild(linha);
+    excluirNoServidor(id, function () {
+      const index = funcionarios.indexOf(funcionario);
+      funcionarios.splice(index, 1);
+  
+      const linha = document.querySelector(`table tr[id='${funcionario.idFuncionario}']`);
+      linha.parentNode.removeChild(linha);
+    });
+  }
 }
 
 function salvar() {
@@ -120,14 +124,43 @@ function salvar() {
     } else if (input.type == 'checkbox') {
       funcionario[input.name] = input.checked;
     } else {
-      funcionario[input.name] = input.value;
+      funcionario[input.name] = input.value || undefined;
     }
   }
 
-  funcionarios.push(funcionario);
+  salvarNoServidor(funcionario, function (fun) {
+    if (!funcionario.idFuncionario) {
+      funcionarios.push(fun);
+  
+      adicionaFuncionarioNaTabela(fun);
+    }
+  
+    fecharModal();
+  });
+}
 
-  fecharModal();
-  adicionaFuncionarioNaTabela(funcionario);
+function salvarNoServidor(funcionario, callback) {
+  let url = '/api/funcionarios';
+  let method = 'POST';
+
+  if (funcionario.idFuncionario) {
+    url = url + '/' + funcionario.idFuncionario;
+    method = 'PUT';
+  }
+  
+  fetch(url, { 
+    method: method,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(funcionario)
+  })
+    .then((res) => res.json())
+    .then(callback);
+}
+
+function excluirNoServidor(id, callback) {
+  let url = '/api/funcionarios/' + id;
+  
+  fetch(url, { method: 'DELETE' }).then(callback);
 }
 
 function carregarFuncionario(funcionario, desabilitado, titulo, botaoFechar, botaoSalvar, botaoCancelar) {

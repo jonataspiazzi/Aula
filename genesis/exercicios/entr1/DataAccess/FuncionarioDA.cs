@@ -37,5 +37,21 @@ namespace entr1.DataAccess
         {
             return _funcionarios;
         }
+
+        public Funcionario Criar(Funcionario model)
+        {
+            model.IdFuncionario = _funcionarios.Count + 1;
+
+            return model;
+        }
+
+        public Funcionario Editar(Funcionario model)
+        {
+            return model;
+        }
+
+        public void Excluir(int id)
+        {
+        }
     }
 }
