@@ -1,6 +1,11 @@
+const funcionarios = [];
+
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("novoFuncionario").onclick = abrirModal;
+  document.getElementById("novoFuncionario").onclick = novo;
   document.querySelector('.modal .modal-header .close').onclick = fecharModal;
+  document.querySelector('.modal .modal-footer #cancelar').onclick = fecharModal;
+  document.querySelector('.modal .modal-footer #fechar').onclick = fecharModal;
+  document.querySelector('.modal .modal-footer #salvar').onclick = salvar;
 
   listarFuncionariosDoServidor();
 });
@@ -11,6 +16,8 @@ function listarFuncionariosDoServidor() {
             return res.json();
         })
         .then((data) => {
+            funcionarios.push(...data);
+
             for (var i = 0; i < data.length; i++) {
                 adicionaFuncionarioNaTabela(data[i]);
             }
@@ -20,6 +27,7 @@ function listarFuncionariosDoServidor() {
 function adicionaFuncionarioNaTabela(funcionario) {
     var corpoTabela = document.querySelector('#funcionarios tbody');
     var linha = document.createElement("tr");
+    linha.id = funcionario.idFuncionario;
 
     corpoTabela.appendChild(linha);
 
@@ -45,18 +53,114 @@ function adicionaFuncionarioNaTabela(funcionario) {
 
     var c6 = document.createElement("td");
     c6.style.textAlign = 'center';
-    c6.innerHTML = '<input type="checkbox" class="input-toggle" checked disabled />';
+    c6.innerHTML = `<input type="checkbox" class="input-toggle" ${funcionario.acessoAoIClips ? 'checked' : ''} disabled />`;
     linha.appendChild(c6);
 
     var c7 = document.createElement("td");
     c7.innerHTML = `
       <div class="grid-button">
-        <img src="/images/visualizar.png" />
-        <img src="/images/editar.png" />
-        <img src="/images/excluir.png" />
+        <img src="/images/visualizar.png" onclick="visualizar(${funcionario.idFuncionario})" />
+        <img src="/images/editar.png" onclick="editar(${funcionario.idFuncionario})" />
+        <img src="/images/excluir.png" onclick="excluir(${funcionario.idFuncionario})" />
       </div>
     `;
     linha.appendChild(c7);
+}
+
+function novo() {
+  const funcionario = {
+    acessoAoIClips: false,
+    ativoNaAgencia: false,
+    dataNascimento: '',
+    departamento: '',
+    email: '',
+    idFuncionario: '',
+    login: '',
+    nome: '',
+    senha: '',
+    telefonePrimario: '',
+    telefoneSecundario: ''
+  };
+
+  carregarFuncionario(funcionario, false, 'Novo Funcionário', 'none', 'block', 'block');
+}
+
+function visualizar(id) {
+  const funcionario = funcionarios.find(f => f.idFuncionario == id);
+
+  carregarFuncionario(funcionario, true, 'Funcionário', 'block', 'none', 'none');
+}
+
+function editar(id) {
+  const funcionario = funcionarios.find(f => f.idFuncionario == id);
+  
+  carregarFuncionario(funcionario, false, 'Editar Funcionário', 'none', 'block', 'block');
+}
+
+function excluir(id) {
+  const funcionario = funcionarios.find(f => f.idFuncionario == id);
+
+  const index = funcionarios.indexOf(funcionario);
+  funcionarios.splice(index, 1);
+
+  const linha = document.querySelector(`table tr[id='${funcionario.idFuncionario}']`);
+  linha.parentNode.removeChild(linha);
+}
+
+function salvar() {
+  const funcionario = {};
+
+  for (const input of document.querySelectorAll('.modal [name]')) {
+    if (input.type == 'date') {
+      if (input.value) {
+        funcionario[input.name] = new Date(input.value);
+      } else {
+        funcionario[input.name] = undefined;
+      }
+    } else if (input.type == 'checkbox') {
+      funcionario[input.name] = input.checked;
+    } else {
+      funcionario[input.name] = input.value;
+    }
+  }
+
+  funcionarios.push(funcionario);
+
+  fecharModal();
+  adicionaFuncionarioNaTabela(funcionario);
+}
+
+function carregarFuncionario(funcionario, desabilitado, titulo, botaoFechar, botaoSalvar, botaoCancelar) {
+  document.querySelector('.modal #fechar').style.display = botaoFechar;
+  document.querySelector('.modal #cancelar').style.display = botaoCancelar;
+  document.querySelector('.modal #salvar').style.display = botaoSalvar;
+  document.querySelector('.modal .modal-header h2').innerHTML = titulo;
+
+  for (const tag of document.querySelectorAll('.modal [name]')) {
+    tag.disabled = desabilitado;
+  }
+
+  for (const prop in funcionario) {
+    const input = document.querySelector(`.modal [name=${prop}]`);
+    
+    if (input) {
+      if (input.type == "date") {
+        if (funcionario[prop]) {
+          input.value = new Date(funcionario[prop]).toISOString().substr(0, 10);
+        } else {
+          input.value = '';
+        }
+      }
+      else if (input.type == "checkbox") {
+        input.checked = funcionario[prop];
+      }
+      else {
+        input.value = funcionario[prop];
+      }
+    }
+  }
+
+  abrirModal();
 }
 
 function fecharModal() {

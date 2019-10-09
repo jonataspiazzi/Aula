@@ -69,35 +69,36 @@
           <div class="field-section">
             <div class="row">
               <h3>Dados Pessoais</h3>
+              <input type="hidden" name="idFuncionario" />
             </div>
             <div class="row">
               <div class="field-group col-6">
                 <label>Nome *</label>
-                <input type="text" />
+                <input type="text" name="nome" />
               </div>
               <div class="field-group col-6">
                 <label>E-mail *</label>
-                <input type="text" />
+                <input type="text" name="email" />
               </div>
             </div>
             <div class="row">
               <div class="field-group col-6">
                 <label>Departamento *</label>
-                <input type="text" />
+                <input type="text" name="departamento" />
               </div>
               <div class="field-group col-6">
                 <label>Data de Nascimento</label>
-                <input type="date" />
+                <input type="date" name="dataNascimento" />
               </div>
             </div>
             <div class="row">
               <div class="field-group col-6">
                 <label>Telefone Primario</label>
-                <input type="text" />
+                <input type="text" name="telefonePrimario" />
               </div>
               <div class="field-group col-6">
                 <label>Telefone Secundario</label>
-                <input type="text" />
+                <input type="text" name="telefoneSecundario" />
               </div>
             </div>
           </div>
@@ -109,34 +110,35 @@
             <div class="row">
               <div class="field-group col-6">
                 <label>Login</label>
-                <input type="text" />
+                <input type="text" name="login" />
               </div>
               <div class="field-group col-3">
                 <label>Acesso ao iClips</label>
-                <input type="checkbox" class="input-toggle" />
+                <input type="checkbox" class="input-toggle" name="acessoAoIClips" />
               </div>
               <div class="field-group col-3">
                 <label>Ativo na agência</label>
-                <input type="checkbox" class="input-toggle" />
+                <input type="checkbox" class="input-toggle" name="ativoNaAgencia" />
               </div>
             </div>
             <div class="row">
               <div class="field-group col-6">
                 <label>Senha</label>
-                <input type="text" />
+                <input type="password" name="senha" />
                 <span>A senha deve ter entre 6 e 50 caracteres</span>
               </div>
               <div class="field-group col-6">
                 <label>Confirmar Senha</label>
-                <input type="text" />
+                <input type="password" name="confirmarSenha" />
               </div>
             </div>
             <div class="row"></div>
           </div>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-gray">Cancelar</button>
-          <button class="btn btn-purple">Salvar</button>
+          <button class="btn btn-gray" id="cancelar">Cancelar</button>
+          <button class="btn btn-purple" id="salvar">Salvar</button>
+          <button class="btn btn-purple" id="fechar">Fechar</button>
         </div>
       </div>
     </div>

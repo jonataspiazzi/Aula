@@ -14,6 +14,7 @@ namespace entr1.DataAccess
             {
                 new Funcionario
                 {
+                    IdFuncionario = 1,
                     Nome = "Augusto Cezar",
                     Departamento = "Desenvolvimento",
                     Email = "a@iclips.com.br",
@@ -22,6 +23,7 @@ namespace entr1.DataAccess
                 },
                 new Funcionario
                 {
+                    IdFuncionario = 2,
                     Nome = "Karina Vasconcellos",
                     Departamento = "Customer Success",
                     Email = "a@iclips.com.br",
