@@ -7,7 +7,7 @@ namespace _29
         static void Main(string[] args)
         {
             int a, b, cont;
-            string termos, termos;
+            string termo, termos;
 
             Console.WriteLine(" 20 primeiros termos da seqüência: 4/1 são:");
 
@@ -15,6 +15,7 @@ namespace _29
             b = 1;
             termo = "";
             termos = "";
+            cont = 0;
 
             while (cont<20)
 
@@ -22,7 +23,10 @@ namespace _29
 
             termo = a + "/" + b;
 
-            termos = termos + " " termo;
+            termos = termos + " " + termo;
+
+            a = a * 3;
+            b = b + 3;
 
             cont = cont + 1;
 
