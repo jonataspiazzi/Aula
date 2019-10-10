@@ -33,8 +33,19 @@ namespace entr1.DataAccess
         {
             using (var context = new IClipsDbContext())
             {
-                context.Funcionarios.Attach(model);
-                context.Entry(model).State = EntityState.Modified;
+                var entity = context.Funcionarios.First(f => f.IdFuncionario == model.IdFuncionario);
+
+                entity.Nome = model.Nome;
+                entity.Email = model.Email;
+                entity.Departamento = model.Departamento;
+                entity.DataNascimento = model.DataNascimento;
+                entity.TelefonePrimario = model.TelefonePrimario;
+                entity.TelefoneSecundario = model.TelefoneSecundario;
+                entity.Login = model.Login;
+                entity.Senha = model.Senha;
+                entity.AcessoAoIClips = model.AcessoAoIClips;
+                entity.AtivoNaAgencia = model.AtivoNaAgencia;
+                
                 context.SaveChanges();
 
                 return model;
