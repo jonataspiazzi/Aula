@@ -68,7 +68,7 @@ function adicionaFuncionarioNaTabela(funcionario) {
 }
 
 function editaFuncionarioNaTabela(funcionario) {
-  const linha = document.querySelector(`#funcionarios tbody tr[id=${funcionario.idFuncionario}]`);
+  const linha = document.querySelector(`#funcionarios tbody tr[id='${funcionario.idFuncionario}']`);
 
   if (!linha) return;
 
@@ -76,7 +76,7 @@ function editaFuncionarioNaTabela(funcionario) {
   linha.querySelector('td:nth-child(3)').innerHTML = funcionario.departamento;
   linha.querySelector('td:nth-child(4)').innerHTML = funcionario.email;
   linha.querySelector('td:nth-child(5)').innerHTML = funcionario.telefonePrimario;
-  linha.querySelector('td:nth-child(6) input[type=checkbox]').checked = funcionario.telefonePrimario;
+  linha.querySelector('td:nth-child(6) input[type=checkbox]').checked = funcionario.acessoAoIClips;
 }
 
 function novo() {
