@@ -6,7 +6,7 @@ namespace _23
     {
         static void Main(string[] args)
         {
-           int cont, idade, soma;
+            int cont, idade, soma;
             string nome,habitantes , texto;
 
             cont = 0;

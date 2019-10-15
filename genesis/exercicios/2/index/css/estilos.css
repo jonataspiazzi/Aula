@@ -1,9 +1,8 @@
 @charset "utf-8";
 
 body{
-    background-image: url("imagens/parede.jpg");
-    background-color:#c6ddeb;
-    color: rgba(0,0,0,0.5);
+    background-image: url ("/exercicios/2/index/imagens/parede.jpg");
+    color: rgba(253, 10, 10);
 }
 p{
     text-align: justify;
@@ -12,10 +11,11 @@ p{
     color: black;
 }
 h1{
-    text-align: center;
+   
 }
 h2{
     text-align: center;
+    font-size: 30px;
 }
 h3{
     text-align: center;
@@ -54,3 +54,29 @@ figure.foto-legenda figcaption{
 figure.foto-legenda:hover figcaption{
     opacity: 1;
 }
+
+/* Formatação do Menu */
+
+nav#menu {
+    display: block; /* transforma em bloco */ 
+}
+
+nav#menu ul{
+    list-style: none; /* Tira os marcadores */
+    text-transform: uppercase; /* Tudo em maiusculo*/
+    position: absolute;
+    top: -20px;
+    left: 700px;
+}
+
+nav#menu li{
+    display: inline-block; /* blocos na mesma linha*/
+    background-color: #dddddd; /* cor de fundo */
+    padding: 10px; /* borda interna */ 
+    margin: 2px; /* margin = borda externa */
+}
+
+nav#menu h1 {
+    display: none; /* esconder */
+}
+   

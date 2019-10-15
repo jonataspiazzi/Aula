@@ -7,10 +7,11 @@ namespace _32
         static void Main(string[] args)
         {
             decimal cont, idade, modalidades, tempo, pontos;
-            string texto, nome, nomeModali;
+            string texto, nome, nomeModali, notas;
 
             pontos = 0;
             cont = 0;
+            notas = " ";
 
 
             Console.WriteLine("Digite o nome da atleta: ");
@@ -54,9 +55,12 @@ namespace _32
 
                 }
                 
-                Console.WriteLine( "A pontuaçõa da atleta no "+ nomeModali + " foi " + pontos);
+                notas = notas + nomeModali + " " + pontos + " / ";
 
                 cont = cont + 1;
-           }
+            }
+
+            Console.WriteLine( "A pontuação da atleta " + nome + " de " + idade + " anos de idade foi: "+ notas);
     }
+}
 }
