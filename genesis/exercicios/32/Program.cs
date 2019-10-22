@@ -44,7 +44,6 @@ namespace _32
                     {
                       pontos = 70;
                     }
-
                         if ( tempo > 13)
                         {
                         pontos = 40;

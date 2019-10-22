@@ -1,50 +1,38 @@
 ﻿using System;
-
-namespace _3
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+ 
+namespace EX3
 {
     class Program
     {
+        // Método calculador do fatorial.
+        static long Fatorial(int number)
+        {
+            // Se o parâmetro (valor desejado para calculo do fatorial)
+            // for 0 ou 1, o retorno sempre será 1 (devido a regra do fatorial).
+            // Se for maior que 1, é feito o número vezes o fatorial desse mesmo número menos 1
+            // até o parâmetro ser 1.
+            // Isso é chamado de função recursiva / método recursivo / recursive function.
+            if (number <= 1)
+                return 1;
+            else return number * Fatorial(number - 1);
+        }
+ 
+        // Método principal.
         static void Main(string[] args)
         {
-           const int numeroQtd = 10;
-int[] numeros = new int[numeroQtd];
-int menor = 0, maior = 0, posicao_menor = 0, posicao_maior = 0;
-
-Console.WriteLine( "Informe 10 números inteiros:" );
-
-for( int i = 0; i < numeroQtd; i++ )
-{
-
-    Console.WriteLine( ( i + 1 ) + "º número:" );
-    numeros[i] = Convert.ToInt32( Console.ReadLine() );
-
-    if( i == 0 )
-    {
-        menor = numeros[0];
-        maior = numeros[0];
-    }
-
-    if( numeros[i] < menor )
-    {
-
-        menor = numeros[i];
-        posicao_menor = i;
-
-    }
-    else if( numeros[i] > maior )
-    {
-        maior = numeros[i];
-        posicao_maior = i;
-    }
-
-}
-
-Console.WriteLine( "O menor número é:" + menor );
-Console.WriteLine( "A posição do menor número é:" + posicao_menor );
-Console.WriteLine( "O maior número é:" + maior );
-Console.WriteLine( "A posição do maior número é:" + posicao_maior );
-
-Console.Read();
+            // Muda a cor das letras do console para amarelo.
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            // Exibe os resultados dos fatoriais de 0 à 20.
+            for (int i = 0; i <= 20; i++)
+            {
+                // Mostra o fatorial e seu resultado.
+                Console.WriteLine("{0} ! = {1}", i, Fatorial(i));
+            }
+            // Aguarda para sair.
+            Console.ReadLine();
         }
     }
 }
