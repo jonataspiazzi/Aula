@@ -26,17 +26,17 @@ namespace _40
                 texto = Console.ReadLine();
                 horas = int.Parse(texto);
 
-                if ( horas >= 50 )
+                if ( horas > 50 )
                 {
                     extra = horas - 50;
-                    salario = 50 * 10.50;
+                    salario = 50 * 10.50M;
                     salarioExtra = extra * 12;
                     salarioFinal = salario + salarioExtra;
                 }  
                 else 
                 {
-                  salario = horas * 10.50; 
-                  salarioFinal = salario + 0; 
+                    salario = horas * 10.50M;
+                    salarioFinal = salario; 
                 }
 
                 salarioTotal = salarioTotal + salarioFinal;
@@ -48,9 +48,8 @@ namespace _40
                 {
                     contS = contS + 1;
                 }
-                else {}
 
-              cont = cont + 1;
+                cont = cont + 1;
             }
 
             Console.WriteLine(contS + " operários trabalharam mais de 40 horas");

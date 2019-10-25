@@ -6,7 +6,7 @@ namespace _44
     {
         static void Main(string[] args)
         {
-            decimal cont, max, salario, media, salarioTotal;
+            decimal cont = 0, max, salario, media, salarioTotal;
             string texto;
             bool sexo;
 
@@ -17,7 +17,7 @@ namespace _44
             while (cont < max)
             {
                 Console.WriteLine("Sexo:");
-                sexo = cont.ReadLine();
+                sexo = Console.ReadLine() == "m";
 
                 Console.WriteLine("Idade:");
                 texto = Console.ReadLine();
