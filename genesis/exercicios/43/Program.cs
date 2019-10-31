@@ -6,26 +6,32 @@ namespace _43
     {
         static void Main(string[] args)
         {
-            decimal num, total, cont, media;
+            decimal num, total = 0, cont = 1, media, maior = int.MinValue, menor = int.MaxValue;
             string texto;
 
-            cont = 0;
-            total = 0;
-
-            while (cont < 10)
-
+            while (cont <= 10)
             {
             Console.WriteLine("Digite um número");
             texto = Console.ReadLine();
             num = int.Parse(texto);
 
-            total = total + num;
+             if (num < menor)
+                {
+                    menor = num;
+                }
+             else if (num > maior)
+                {
+                    maior = num;
+                }   
+             total += num; 
 
-            cont = cont + 1;
+            cont++;
             }
             media = total / cont;
 
             Console.WriteLine("A media dos valores é: " + media);
+            Console.WriteLine("O maior numero é: " + maior);
+            Console.WriteLine("O menor numero é: " + menor);
         }
     }
 }

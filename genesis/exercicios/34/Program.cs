@@ -6,12 +6,8 @@ namespace _34
     {
         static void Main(string[] args)
         {
-            decimal numero, soma, contNum, media, cont, max;
+            decimal numero, soma = 0, contNum = 0, media, cont = 0, max, menor = int.MaxValue;
             string texto;
-
-            soma = 0;
-            contNum = 0;
-            cont = 0;
 
             Console.WriteLine("Quantos numeros seram digitados?");
             texto = Console.ReadLine();
@@ -24,19 +20,22 @@ namespace _34
             texto = Console.ReadLine();
             numero = int.Parse(texto);
 
+            if (numero < menor)
+              {
+                menor = numero;
+              }
+
             if (numero > 4)
             if (numero < 20)
-            {
-                soma = soma + numero;
+              {
+                soma += numero;
                 contNum = contNum + 1;
-            }
-            else
-            {
-            }
-            cont = cont + 1;
+              }
+            cont++;
             }
             media = soma / contNum;
             Console.WriteLine("A media dos numeros é " + media);
+            Console.WriteLine("O menor numero é: " + menor);
         }
     }
 }

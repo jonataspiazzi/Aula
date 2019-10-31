@@ -42,7 +42,7 @@ namespace _40
                 salarioTotal = salarioTotal + salarioFinal;
 
                 Console.WriteLine("Código " + codigo);
-                Console.WriteLine("Salario " + salarioTotal);
+                Console.WriteLine("Salario " + salarioFinal);
 
                 if ( horas >= 40)
                 {
