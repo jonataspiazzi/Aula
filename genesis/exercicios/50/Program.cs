@@ -17,10 +17,10 @@ namespace _50
                 {
                     Console.WriteLine("Sexo:");
                     Console.WriteLine("1 para masculino / 2 para feminino");
-                    sexo = int.Parse(Console.WriteLine());
+                    sexo = int.Parse(Console.ReadLine());
 
                     Console.WriteLine("Cor dos olhos:");
-                    Console.WriteLine("1 para preto / 2 para castanho / 3 para azul");
+                    Console.WriteLine("1 para preto\n2 para castanho\n3 para azul");
                     olho = int.Parse(Console.ReadLine());
 
                     Console.WriteLine("Cor do cabelo:");
@@ -34,7 +34,7 @@ namespace _50
                     {
                         trintamais++;
                     }
-                    if (sexo = 2 && olho = 1 && olho = 2 && renda > 300)
+                    if (sexo == 2 && (olho == 1 || olho == 2) && renda > 300)
                     {
                         especialum++;
                     }
