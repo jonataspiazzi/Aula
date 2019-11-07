@@ -1,12 +1,15 @@
 ﻿using System;
 
-namespace _59
+namespace _59_B
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int cont = 0, max = 0, ipi = 0, codigo = 0, valor = 0, porcentagem = 0;
+            int cont = 0, max = 0, ipi = 0;
+            int[] codigo = new int[10];
+            int[] valor = new int[10];
+            int[] porcentagem = new int[10];
 
             Console.WriteLine("Qual o total de peças?");
             max = int.Parse(Console.ReadLine());
@@ -14,13 +17,13 @@ namespace _59
             while ( cont < max)
             {
                 Console.WriteLine("Qual o código da peça?");
-                codigo = int.Parse(Console.ReadLine());
+                codigo[cont] = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("Qual o valor unitário da peça?");
-                valor = int.Parse(Console.ReadLine());
+                valor[cont] = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("Qual a porcentagem do IPI a ser acrescido no valor de cada peça?");
-                porcentagem = int.Parse(Console.ReadLine());
+                porcentagem[cont] = int.Parse(Console.ReadLine());
 
                 ipi = (valor * 1) * (porcentagem / 100 + 1);
                 cont++;
