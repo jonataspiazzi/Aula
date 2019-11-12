@@ -25,7 +25,7 @@ namespace _59_B
                 Console.WriteLine("Qual a porcentagem do IPI a ser acrescido no valor de cada peça?");
                 porcentagem[cont] = int.Parse(Console.ReadLine());
 
-                ipi = (valor * 1) * (porcentagem / 100 + 1);
+                ipi = (valor[cont] * 1) * (porcentagem[cont] / 100 + 1);
                 cont++;
                 Console.WriteLine("O valor final da peça é: " + ipi);
             }
