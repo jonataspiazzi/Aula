@@ -7,23 +7,16 @@ namespace _30_F1
         static void Main(string[] args)
         {
             const int largura = 52;
+            int altura = 5;
 
-            int caractere = 0;
-
-            while (caractere < largura)
+            for (int cont = 0; cont < altura; cont++)
             {
-                Console.Write("*");
-                caractere++;
+                for (int caractere = 0; caractere < largura; caractere++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
             }
-
-            /*
-            for (int caractere = 0; caractere < largura; caractere++)
-            {
-                Console.Write("*");
-            }
-            */
-
-            Console.WriteLine();
         }
     }
 }
