@@ -18,7 +18,7 @@ namespace _30_F2
                     {
                         Console.Write("*");
                     }
-                    else if (caractere > 17 && caractere < 35)
+                    else if (caractere < 35)
                     {
                         Console.Write("+");
                     }

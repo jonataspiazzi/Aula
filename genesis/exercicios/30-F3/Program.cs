@@ -8,16 +8,18 @@ namespace _30_F3
         {
             const int largura = 19;
             int cont = 0;
+            int contLinha = 1;
+            int contFigura = 0;
 
             for (int altura = 7; cont < altura; cont++)
 
             {
-                if (cont < 1) // linha 1
+                if (cont < contLinha) // linha 1
                 {
 
                     for (int caractere = 0; caractere < largura; caractere++)
                     {
-                        if (caractere > 0)
+                        if (caractere > contFigura)
                         {
                         Console.Write("*");
                         }
@@ -30,12 +32,12 @@ namespace _30_F3
                     Console.WriteLine();
                 }
 
-                else if (cont < 2) // linha 2
+                else if (cont < contLinha) // linha 2
                 {
 
                     for (int caractere = 0; caractere < largura; caractere++)
                     {
-                        if (caractere > 1)
+                        if (caractere > contFigura)
                         {
                         Console.Write("*");
                         }
@@ -48,12 +50,12 @@ namespace _30_F3
                     Console.WriteLine();
                 }
                 
-                else if (cont < 3) // linha 3
+                else if (cont < contLinha) // linha 3
                 {
 
                     for (int caractere = 0; caractere < largura; caractere++)
                     {
-                        if (caractere > 2)
+                        if (caractere > contFigura)
                         {
                         Console.Write("*");
                         }
@@ -66,12 +68,12 @@ namespace _30_F3
                     Console.WriteLine();
                 }
 
-                else if (cont < 4) // linha 4
+                else if (cont < contLinha) // linha 4
                 {
 
                     for (int caractere = 0; caractere < largura; caractere++)
                     {
-                        if (caractere > 3)
+                        if (caractere > contFigura)
                         {
                         Console.Write("*");
                         }
@@ -84,12 +86,12 @@ namespace _30_F3
                     Console.WriteLine();
                 }
 
-                else if (cont < 5) // linha 5
+                else if (cont < contLinha) // linha 5
                 {
 
                     for (int caractere = 0; caractere < largura; caractere++)
                     {
-                        if (caractere > 4)
+                        if (caractere > contFigura)
                         {
                         Console.Write("*");
                         }
@@ -102,12 +104,12 @@ namespace _30_F3
                     Console.WriteLine();
                 }
 
-                else if (cont < 6) // linha 6
+                else if (cont < contLinha) // linha 6
                 {
 
                     for (int caractere = 0; caractere < largura; caractere++)
                     {
-                        if (caractere > 5)
+                        if (caractere > contFigura)
                         {
                         Console.Write("*");
                         }
@@ -120,12 +122,12 @@ namespace _30_F3
                     Console.WriteLine();
                 }
 
-                else if (cont < 7) // linha 7
+                else if (cont < contLinha) // linha 7
                 {
 
                     for (int caractere = 0; caractere < largura; caractere++)
                     {
-                        if (caractere > 6)
+                        if (caractere > contFigura)
                         {
                         Console.Write("*");
                         }
@@ -137,6 +139,9 @@ namespace _30_F3
                     
                     Console.WriteLine();
                 }
+
+                contLinha++;
+                contFigura++;
             }
         }
     }
