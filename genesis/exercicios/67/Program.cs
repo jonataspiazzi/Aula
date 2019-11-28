@@ -24,7 +24,7 @@ namespace _67
             cont = 0;
             while (cont < 8)
             {
-                Console.WriteLine("O valor do " + (cont + 1) + "º numero multiplicado por 3 é: " + numB);
+                Console.WriteLine("O valor do " + (cont + 1) + "º numero multiplicado por 3 é: " + numB[cont]);
                 cont++;
             }
         }

@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace _71
+namespace _71_B
 {
     class Program
     {
         static void Main(string[] args)
         {
-           int maxA = 0, maxB = 0;
+            int maxA = 0, maxB = 0;
             int cont = 0, contA = 0, contB = 0;
 
             Console.WriteLine("Quantos elementos o vetor A tem?");
@@ -40,14 +40,14 @@ namespace _71
 
             for (cont = 0; cont < maxT; cont++)
             {
-                while (cont < maxA)
+                if (cont < maxA)
                 {
-                    Console.Write(numA[contA] + " / ");
+                    Console.Write(numA[contA]);
                     contA++;
                     cont++;
                 }
 
-                Console.Write(numB[contB] + " / ");
+                Console.Write(numB[contB]);
                 contB++;
 
             }

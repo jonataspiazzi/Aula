@@ -14,21 +14,21 @@ namespace _62
 
             string[] num = new string[max];
 
-            while (cont < max)
+            for (cont = 0; cont < max; cont++)
             
             {
                 Console.WriteLine("Digíte o " + (cont + 1) + "º numero");
                 num[cont] = Console.ReadLine();
-
-                cont++;
             }
 
-            while (cont > 0)
+            int soma = 0;
+
+            while (cont >= 0)
 
             {
-                Console.WriteLine("O " + cont + "º numero digitado foi: " + num[cont]);
-
+                Console.WriteLine("O " + (soma + 1) + "º numero digitado foi: " + num[cont]);
                 cont--;
+                soma++;
             }
 
         }
