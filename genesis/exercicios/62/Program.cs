@@ -23,6 +23,8 @@ namespace _62
 
             int soma = 0;
 
+            cont = 2;
+
             while (cont >= 0)
 
             {

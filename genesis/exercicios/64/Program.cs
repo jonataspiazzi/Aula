@@ -6,7 +6,7 @@ namespace _64
     {
         static void Main(string[] args)
         {
-             decimal max , cont = 0;
+             int max , cont = 0;
 
             Console.WriteLine("Quantos alunos fizeram a prova?");
             max = int.Parse(Console.ReadLine());

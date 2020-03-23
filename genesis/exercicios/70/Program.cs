@@ -17,7 +17,7 @@ namespace _70
             while (cont < max)
             {
                 Console.WriteLine("Digite o " + (cont + 1) + "º numero do vetor A");
-                numB[cont] = int.Parse(Console.ReadLine());
+                numA[cont] = int.Parse(Console.ReadLine());
 
                 cont++;
             }
