@@ -6,7 +6,8 @@ namespace _65
     {
         static void Main(string[] args)
         {
-            int total = 0, media, cont = 0;
+            decimal media;
+            int total = 0, cont = 0;
             int menor = int.MaxValue, maior = int.MinValue;
 
             Console.WriteLine("Quantos numeros seram digitados?");
@@ -36,7 +37,7 @@ namespace _65
                 }
                 cont++;
             }
-            media = total / max;
+            media = total * 1M / max;
 
             Console.WriteLine("O maior numero digitado foi: " + maior);
             Console.WriteLine("O menor numero digitado foi: " + menor);

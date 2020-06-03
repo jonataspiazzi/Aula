@@ -6,13 +6,13 @@ namespace _71
     {
         static void Main(string[] args)
         {
-           int maxA = 0, maxB = 0;
+            int maxA = 0, maxB = 0;
             int cont = 0, contA = 0, contB = 0;
 
             Console.WriteLine("Quantos elementos o vetor A tem?");
             maxA = int.Parse(Console.ReadLine());
 
-            int [] numA = new int [maxA];
+            int[] numA = new int[maxA];
 
             for (contA = 0; contA < maxA; contA++)
             {
@@ -23,7 +23,7 @@ namespace _71
             Console.WriteLine("Quantos elementos o vetor B tem?");
             maxB = int.Parse(Console.ReadLine());
 
-            int [] numB = new int [maxB];
+            int[] numB = new int[maxB];
 
             for (contB = 0; contB < maxB; contB++)
             {

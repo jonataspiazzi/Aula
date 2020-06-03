@@ -6,7 +6,7 @@ namespace _64
     {
         static void Main(string[] args)
         {
-             decimal max , cont = 0;
+            int max, cont = 0;
 
             Console.WriteLine("Quantos alunos fizeram a prova?");
             max = int.Parse(Console.ReadLine());
@@ -18,7 +18,7 @@ namespace _64
             while (cont < max)
             {
                 Console.WriteLine("Qual o valor da prova do " + (cont + 1) + "º aluno?");
-                nota[cont] = int.Parse(Console.ReadLine());
+                nota[cont] = decimal.Parse(Console.ReadLine());
     
                 total += nota[cont];
 

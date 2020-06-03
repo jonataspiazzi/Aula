@@ -23,11 +23,10 @@ namespace _62
 
             int soma = 0;
 
-            while (cont >= 0)
-
+            for (cont = 2; cont >= 0; cont--)
             {
                 Console.WriteLine("O " + (soma + 1) + "º numero digitado foi: " + num[cont]);
-                cont--;
+                
                 soma++;
             }
 
