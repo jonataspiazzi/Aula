@@ -8,39 +8,54 @@ namespace _73
         {
             // Armazenando os elementos do vetor A e B.
 
-            int max = 0;
+            int maxA = 0, maxB = 0;
+            int cont = 0, contA = 0, contB = 0;
 
             Console.WriteLine("Quantos elementos o vetor A ira ter?");
-            max = int.Parse(Console.ReadLine());
+            maxA = int.Parse(Console.ReadLine());
 
-            int [] numA = new int [max];
+            int [] numA = new int [maxA];
 
-            for (cont = 0; cont < max; cont++)
+            for (contA = 0; contA < maxA; contA++)
             {
                Console.WriteLine("Digite o valor do " + (cont + 1) + "º numero do elemento A");
-               numA[cont] = int.Parse(Console.ReadLine());
-
+               numA[contA] = int.Parse(Console.ReadLine());
+               contA++;
+               cont++;
             }
-            //...
-            max = 0;
+            contA = 0;
+            cont = 0;
 
             Console.WriteLine("Quantos elementos o vetor B ira ter?");
-            max = int.Parse(Console.ReadLine());
+            maxB = int.Parse(Console.ReadLine());
 
-            int [] numB = new int [max];
+            int [] numB = new int [maxB];
 
-            for (cont = 0; cont < max; cont++)
+            for (contB = 0; contB < maxB; contB++)
             {
                 Console.WriteLine("Digite o valor do " + (cont + 1) + "º numero do elemento B");
-                numB[cont] = int.Parse(Console.ReadLine());
+                numB[contB] = int.Parse(Console.ReadLine());
+                contB++;
+                cont++;
             }
+            contB = 0;
+            cont = 0;
 
             //Comparando os elementos
 
-            
+            string repetidos;
 
-
-
+            for (cont = 0; contA < maxA; cont++)
+            {
+                for (cont = 0; contB < maxB; contB++)
+                {
+                    if (numA[contA] == numB[contB])
+                    {
+                        repetidos = numA[contA] + " /";
+                    }  
+                }
+                contA++;
+            }
         }
     }
 }

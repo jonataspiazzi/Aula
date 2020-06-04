@@ -36,7 +36,7 @@ namespace _71
             contA = 0;
             contB = 0;
 
-            Console.WriteLine("A sequencia dos numeros digitados é");
+            Console.WriteLine("A sequencia de numeros do vetor C é: ");
 
             for (cont = 0; cont < maxT; cont++)
             {

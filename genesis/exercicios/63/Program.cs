@@ -32,11 +32,10 @@ namespace _63
             while (cont < max)
             {   
                 // pode fazer isso - (cont > max - ultimos)
-                if (cont >= max - ultimos)
+                if (cont > max - ultimos - 1)
                 {   
-                    Console.WriteLine(num[cont]);   
+                    Console.WriteLine(num[cont]);
                 }
-
                 cont++;
             }
         }
