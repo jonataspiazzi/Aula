@@ -5,7 +5,6 @@ namespace _9C
     class Program
     {
         static void Main(string[] args)
-        
         {
             int numA = 0, numB = 0;
             int resultado = 0;
@@ -23,19 +22,19 @@ namespace _9C
 
             if (funcao == "+")
             {
-                Console.WriteLine(" = " + funcao.soma(resultado));
+                Console.WriteLine(" = " + Funcao.Soma(numA, numB));
             }
             else if (funcao == "-")
             {
-                Console.WriteLine(" = " + funcao.subitracao(resultado));
+                Console.WriteLine(" = " + Funcao.Subitracao(numA, numB));
             }
             else if (funcao == "*")
             {
-                Console.WriteLine(" = " + funcao.multiplicacao(resultado));
+                Console.WriteLine(" = " + Funcao.Multiplicacao(numA, numB));
             }
             else if (funcao == "/")
             {
-                Console.WriteLine(" = " + funcao.divisao(resultado));
+                Console.WriteLine(" = " + Funcao.Divisao(numA, numB));
             }
         }
     }

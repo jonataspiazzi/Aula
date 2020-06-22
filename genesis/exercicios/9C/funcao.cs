@@ -2,29 +2,29 @@ using System;
 
 namespace _9C
 {
-    public class funcao
+    public class Funcao
     {
-        public static int soma(int numA, int numB, int resultado)
+        public static int Soma(int numA, int numB)
         {
-            resultado = numA + numB;
+            var resultado = numA + numB;
             return resultado;
         }
-        
-        public static int subitracao(int numA, int numB, int resultado)
+
+        public static int Subitracao(int numA, int numB)
         {
-            resultado = numA + numB;
+            var resultado = numA - numB;
             return resultado;
         }
-        
-        public static int divisao(int numA, int numB, int resultado)
+
+        public static int Divisao(int numA, int numB)
         {
-            resultado = numA + numB;
+            var resultado = numA / numB;
             return resultado;
         }
-        
-        public static int multiplicacao(int numA, int numB, int resultado)
+
+        public static int Multiplicacao(int numA, int numB)
         {
-            resultado = numA + numB;
+            var resultado = numA * numB;
             return resultado;
         }
     }

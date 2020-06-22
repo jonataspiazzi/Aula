@@ -6,31 +6,28 @@ namespace _22_F
     {
         static void Main(string[] args)
         {
-            int A = 0;
-
             Console.WriteLine("Digite um valor de num");
             int num = int.Parse(Console.ReadLine());
-            
-            if (num%2==0)
+
+            if (num % 2 == 0)
             {
-                Console.WriteLine("O dobro de " + num + " é " + par(A));
+                Console.WriteLine("O dobro de " + num + " é " + Par(num));
             }
             else
             {
-                Console.WriteLine("O triplo de " + num + " é " + impar(A));
+                Console.WriteLine("O triplo de " + num + " é " + Impar(num));
             }
-            
         }
-       
-        static int impar(int num)
+
+        static int Impar(int num)
+        {
+            int A = num * 3;
+            return A;
+        }
+        static int Par(int num)
         {
             int A = num * 2;
             return A;
-        }
-        static int par(int num)
-        {
-           int A = num * 3;
-           return A;
         }
     }
 }
