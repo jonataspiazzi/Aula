@@ -1,46 +1,46 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": ".NET Core Launch (console)",
-      "type": "coreclr",
-      "request": "launch",
-      "preLaunchTask": "build",
-      "program": "${workspaceFolder}/CSharp/Aulas/Classes/exemplo02/bin/Debug/netcoreapp2.2/exemplo02.dll",
-      "args": [],
-      "cwd": "${workspaceFolder}/CSharp/Aulas/Classes/exemplo02",
-      "stopAtEntry": false,
-      "requireExactSource": false,
-      "console": "internalConsole"
-    },
-    {
-      "name": ".NET Core Launch (web)",
-      "type": "coreclr",
-      "request": "launch",
-      "preLaunchTask": "build",
-      "program": "${workspaceFolder}/genesis/exercicios/entr1/bin/Debug/netcoreapp2.2/entr1.dll",
-      "args": [],
-      "cwd": "${workspaceFolder}/genesis/exercicios/entr1",
-      "stopAtEntry": false,
-      "serverReadyAction": {
-        "action": "openExternally",
-        "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
-      },
-      "env": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "sourceFileMap": {
-        "/Views": "${workspaceFolder}/Views"
-      }
-    },
-    {
-      "name": ".NET Core Attach",
-      "type": "coreclr",
-      "request": "attach",
-      "processId": "${command:pickProcess}"
-    }
-  ]
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/genesis/exercicios/9C/bin/Debug/netcoreapp3.1/9C.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/genesis/exercicios/9C",
+            "stopAtEntry": false,
+            "requireExactSource": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": ".NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/genesis/exercicios/entr1/bin/Debug/netcoreapp2.2/entr1.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/genesis/exercicios/entr1",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
 }

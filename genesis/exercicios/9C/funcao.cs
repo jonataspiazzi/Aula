@@ -4,15 +4,15 @@ namespace _9C
 {
     public class Funcao
     {
-        public static int Soma(int numA, int numB)
+        public static int Soma(int m, int n)
         {
-            var resultado = numA + numB;
+            var resultado = m + n;
             return resultado;
         }
 
-        public static int Subitracao(int numA, int numB)
+        public static int Subitracao(int n, int m)
         {
-            var resultado = numA - numB;
+            var resultado = m - n;
             return resultado;
         }
 

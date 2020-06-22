@@ -7,7 +7,6 @@ namespace _9C
         static void Main(string[] args)
         {
             int numA = 0, numB = 0;
-            int resultado = 0;
             string funcao = "";
 
             Console.WriteLine("CALCULADORA GENESIS 0.1");
