@@ -6,7 +6,7 @@ namespace _82
     {
         static void Main(string[] args)
         {
-                        int cont = 0, max = 5;
+            int cont = 0, max = 5;
             int [] num = new int [max];
             
             Console.WriteLine("Digite 5 valores para formar um numero binario");
@@ -20,7 +20,7 @@ namespace _82
             }
 
             int elevado = 5, total = 0;
-            int A = 0;
+            int A = 0, B = 0;
             int expoente = 0, contExpoente = 0;
 
             for(cont = 0; cont < max; cont++)
@@ -35,11 +35,12 @@ namespace _82
 
                 elevado--;
 
-                total = total + A;
+                B = num * A;
+
+                total = total + B;
             }
 
             Console.WriteLine("O valor do numero " + num[0] + num[1] + num[2] + num[3] + num[4] + " é: " + total);
-
         }
     }
 }

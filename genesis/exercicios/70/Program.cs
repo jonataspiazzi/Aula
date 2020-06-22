@@ -26,7 +26,7 @@ namespace _70
 
             while (cont < max)
             {
-                numB[cont] = numA[cont] * numA[cont]; // Math.Pow(numA[cont], 2);
+                numB[cont] = numA[cont] * numA[cont];
 
                 Console.WriteLine("O valor do " + (cont + 1) + "º numero do vetor B é: " + numB[cont]);
 

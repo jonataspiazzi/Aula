@@ -18,7 +18,7 @@ namespace _64
             while (cont < max)
             {
                 Console.WriteLine("Qual o valor da prova do " + (cont + 1) + "º aluno?");
-                nota[cont] = decimal.Parse(Console.ReadLine());
+                nota[cont] = int.Parse(Console.ReadLine());
     
                 total += nota[cont];
 
