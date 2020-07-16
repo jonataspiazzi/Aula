@@ -57,6 +57,8 @@ namespace funcao_aula2
             return nuns;
         }
 
+        //Duv aqui
+
         public static void ImprimeOResultado(int soma)
         {
             Console.WriteLine("O total dos numeros digitados é: " + soma);
