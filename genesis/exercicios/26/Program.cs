@@ -6,9 +6,9 @@ namespace _26
     {
         static void Main(string[] args)
         {
-            
+
             int n1, n2, n3, cont, num;
-           string texto, numeros;
+            string texto, numeros;
 
             n1 = 1;
             n2 = 1;
@@ -21,7 +21,7 @@ namespace _26
             texto = Console.ReadLine();
             num = int.Parse(texto);
 
-            while ( cont < 1)
+            while (cont < 1)
             {
                 n1 = n2;
                 n2 = n3;
@@ -32,18 +32,17 @@ namespace _26
                 numeros = numeros + n3 + " ";
             }
 
-            if ( num = numeros)
-
+            if (num.ToString() == numeros)
             {
-            Console.WriteLine( num + " pertence aos numeros Fibonacci");
+                Console.WriteLine(num + " pertence aos numeros Fibonacci");
             }
             else
-            { 
-            Console.WriteLine( num + " não pertence aos numeros Fibonacci");
+            {
+                Console.WriteLine(num + " não pertence aos numeros Fibonacci");
             }
 
-            Console.WriteLine( n3);
-            
+            Console.WriteLine(n3);
+
         }
     }
 }

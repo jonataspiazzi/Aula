@@ -19,9 +19,10 @@ namespace _10_F
             var total = M + A + R;
             return total;
         }
-        public static void Executar(int M, int R)
+
+        public static void Executar()
         {
-            Console.WriteLine("O total de M + 3 + R é: " + Total(M, R));
+            Console.WriteLine("O total de M + 3 + R é: ");
         }
-    }   
+    }
 }
