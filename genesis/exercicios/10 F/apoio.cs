@@ -18,13 +18,14 @@ namespace _10_F
         }
         public static int Soma(int M, int R)
         {
-            var total = M + 3 + R;
+            var A = 3;
+            var total = M + A + R;
             return total;
         }
 
-        public static void Mensagem()
+        public static void Mensagem(int M, int R)
         {
-            Console.WriteLine("O total de M + 3 + R é: " + Soma(total));
+            Console.WriteLine("O total de M + 3 + R é: " + Soma(M, R));
         }
     }
 }

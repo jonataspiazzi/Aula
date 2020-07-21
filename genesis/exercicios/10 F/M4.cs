@@ -6,7 +6,8 @@ namespace _10_F
     {
         public static void Executar()
         {
-            Apoio.Mensagem();
+            var M, R;
+            Apoio.Mensagem(M, R);
         }
     }
 }

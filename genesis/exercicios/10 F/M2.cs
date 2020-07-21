@@ -15,12 +15,13 @@ namespace _10_F
         }
         public static int Total(int M, int R)
         {
-            var total = M + 3 + R;
+            var A = 3;
+            var total = M + A + R;
             return total;
         }
-        public static void Executar()
+        public static void Executar(int M, int R)
         {
-            Console.WriteLine("O total de M + 3 + R é: " + Total(total));
+            Console.WriteLine("O total de M + 3 + R é: " + Total(M, R));
         }
     }   
 }

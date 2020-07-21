@@ -23,8 +23,13 @@ namespace _10_F
          }
         public static void Executar()
         {
+            var a = ValordeM();
+            var b = ValordeR();
+
             Console.WriteLine("O total de M + 3 + R é: ");
-            Console.Write(Soma(total));
+            var saida = Soma(a, b, 0);
+
+            Console.Write(saida);
         }
     }
 }
