@@ -1,24 +1,24 @@
 ﻿using System;
 
-namespace _37b
+namespace _37_Fat_2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int num = 0, fat = 1;
+          int num = 0, fat = 1;
             
             Console.WriteLine("Digite um número");
             num = int.Parse(Console.ReadLine());
 
 
-            Console.WriteLine("O fatorial de " + num + " é: " + Fatoreal(num, fat));
+            Console.WriteLine("O fatorial é: " + Fatoreal(num, fat));
         }
-        static int Fatoreal(int fat, int num)
+        static int Fatoreal(int num, int fat)
         {
             while (num > 1)
             {
-                fat *= num; // fat = fat * num;
+                fat *= num; 
                 num--;
             }
             return fat;

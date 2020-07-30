@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_37b</RootNamespace>
+    <RootNamespace>_37_Fat_2</RootNamespace>
   </PropertyGroup>
 
 </Project>
