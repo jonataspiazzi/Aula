@@ -37,6 +37,7 @@ namespace _33_F
                 }
             }
         }
+
         static void Mensagem(int tempo, string nome, string nomeModalidade)
         {
             if (tempo < 10)
