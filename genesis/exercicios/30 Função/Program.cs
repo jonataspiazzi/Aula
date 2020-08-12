@@ -28,7 +28,7 @@ namespace _30_Função
             {
                 DesenhoQuatro(maxLargura, maxLinha, D1, D2);
             }
-            else 
+            else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Escolha um numero entre 1 e 4");
@@ -45,7 +45,7 @@ namespace _30_Função
             Console.WriteLine(mensagem);
             return Console.ReadLine();
         }
-        static void LinhaCaracter(string caracter, int maxLargura) 
+        static void LinhaCaracter(string caracter, int maxLargura)
         {
             for (var contC = 0; contC < maxLargura; contC++)
             {
@@ -55,15 +55,17 @@ namespace _30_Função
         }
         static void DesenhoUm(int maxLinha, string D1, string D2, int maxLargura)
         {
-           for (var cont = 0; cont < maxLinha; cont++)
-           {
-               string caracter = D1;
-               if (cont == 2 || cont == 3)
-               {
-                caracter = D2;
-               }
-               LinhaCaracter(caracter, maxLargura);
-           }
+            for (var cont = 0; cont < maxLinha; cont++)
+            {
+                string caracter = D1;
+
+                if (cont / 2 % 2 == 1)
+                //if (cont % 4 == 2 || cont % 4 == 3)
+                {
+                    caracter = D2;
+                }
+                LinhaCaracter(caracter, maxLargura);
+            }
         }
         static void DesenhoDois(int maxLinha, int maxLargura, string D1, string D2)
         {
@@ -71,7 +73,7 @@ namespace _30_Função
             {
                 var a = maxLargura / 3;
 
-                for(var contLar = 0; contLar < maxLargura; contLar++)
+                for (var contLar = 0; contLar < maxLargura; contLar++)
                 {
                     if (contLar <= a || contLar >= a + a)
                     {
@@ -90,27 +92,29 @@ namespace _30_Função
             var a = 0;
             for (var cont = 0; cont < maxLinha; cont++)
             {
-                for(var contLar = 0; contLar < maxLargura; contLar++)
+                for (var contLar = 0; contLar < maxLargura; contLar++)
                 {
-                   if (contLar <= a)
-                   {
-                       Console.Write(D1);
-                   }
-                   else
-                   {
-                       Console.Write(D2);
-                   }
+                    if (contLar <= a)
+                    {
+                        Console.Write(D1);
+                    }
+                    else
+                    {
+                        Console.Write(D2);
+                    }
                 }
                 Console.WriteLine();
                 a++;
             }
         }
+
         static void DesenhoQuatro(int maxLargura, int maxLinha, string D1, string D2)
         {
+            maxLargura = maxLargura / 2;
             int a = maxLargura, b = 0, c = maxLargura / 2;
             for (var cont = 0; cont < maxLinha; cont++)
             {
-                for(var contLar = 0; contLar < maxLargura; contLar++)
+                for (var contLar = 0; contLar < maxLargura; contLar++)
                 {
                     if (contLar < a)
                     {
@@ -121,7 +125,7 @@ namespace _30_Função
                         Console.Write(D2);
                     }
                 }
-                for(var contLar = 0; contLar < maxLargura; contLar++)
+                for (var contLar = 0; contLar < maxLargura; contLar++)
                 {
                     if (b > contLar)
                     {
