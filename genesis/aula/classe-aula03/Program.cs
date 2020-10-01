@@ -16,8 +16,8 @@ namespace classe_aula03
             Console.WriteLine("Digite a quantidade de competições que ele(a) participou:");
             var qtdCompeticoes = int.Parse(Console.ReadLine());
 
-            //var atleta = new AtletaV1(nomeAtetla, qtdCompeticoes);
-            var atleta = new AtletaV2(nomeAtetla, qtdCompeticoes);
+            var atleta = new AtletaV1(nomeAtetla, qtdCompeticoes);
+            //var atleta = new AtletaV2(nomeAtetla, qtdCompeticoes);
 
             for (var i = 0; i < qtdCompeticoes; i++)
             {
